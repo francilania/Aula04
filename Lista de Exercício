@@ -1,0 +1,186 @@
+package aula04;
+
+public class Aula04 {
+
+  public static void main(String[] args) {
+    Ave arara = new Ave ();
+    Ave papagaio = new Ave ();
+    
+    arara.especie = "Arara Azul";
+    arara.nome = "Blue";
+    arara.cor = "azul";
+    arara.tamanho = "100 cm";
+    arara.peso = "1.2 kg";
+    
+    papagaio.especie = "Papagaio";
+    papagaio.nome = "Louro";
+    papagaio.cor = "verde";
+    papagaio.tamanho = "33 cm";
+    papagaio.peso = "240 g";
+    
+    arara.voar ();
+    
+    papagaio.pousar ();
+    
+    arara.cacar ();
+    
+    Automovel carro = new Automovel  ();
+    Automovel moto = new Automovel  ();
+    
+    carro.marca = "fiat";
+    carro.modelo = "cronos";
+    carro.cilindradaDoMotor = 2400;
+    carro.totaldeRodas = 4;
+    carro.tamanhoTanque = 4300;
+    
+    moto.marca = "honda";
+    moto.modelo = "CG160Titan";
+    moto.cilindradaDoMotor = 1600;
+    moto.totaldeRodas = 2;
+    moto.tamanhoTanque = 2000;
+    
+    carro.abastecer  ();
+    moto.acelerar ();
+    carro.parar ();
+    moto.estacionar ();
+    
+    Pessoa Milena = new Pessoa ();
+    Pessoa Fran = new Pessoa ();
+    
+    Milena.nome = "Milena";
+    Milena.idade = 19;
+    Milena.sexo = "feminino";
+    Milena.nacionalidade = "brasileira";
+    Milena.naturalidade = "cedrense";
+    Milena.estadoCivil = "solteira";
+    
+    Fran.nome = "Fran";
+    Fran.idade = 17;
+    Fran.sexo = "feminino";
+    Fran.nacionalidade = "brasileira";
+    Fran.naturalidade = "cedrense";
+    Fran.estadoCivil = "solteira";
+    
+    Fran.estudar ();
+    Milena.viajar ();
+    Fran.passear ();
+    Milena.casar ();
+    
+    Contato Lisa = new Contato ();
+    Contato Jennie = new Contato ();
+    
+    Lisa.nome = "Lisa";
+    Lisa.telefone = "40028922";
+    Lisa.endereco = "Prado";
+    
+    Jennie.nome = "Jennie";
+    Jennie.telefone = "90906567";
+    Jennie.endereco = "Seul";
+    
+    Lisa.salvarContato ();
+    Jennie.mostrarContato ();
+    Lisa.ligarParaContato ();
+
+  }
+
+}
+
+package aula04;
+
+public class Ave {
+  String especie;
+  String nome;
+  String cor;
+  String tamanho;
+  String peso;
+  
+  void voar () {
+    System.out.println ("Eu sou uma " + especie + " e eu consigo voar!" );
+  }
+  
+  void pousar () {
+    System.out.println ("Eu sou o " + nome + " e eu estou pousando!");
+  }
+  
+  void cacar () {
+    System.out.println  ("Eu sou o " + nome + " e eu estou caçando");
+  }
+}
+
+package aula04;
+
+public class Automovel {
+
+  String marca;
+  String modelo;
+  double cilindradaDoMotor;
+  int totaldeRodas;
+  double tamanhoTanque;
+  
+  void acelerar () {
+    System.out.println  ("O automóvel " + marca + " está acelerando");
+  }
+  
+  void parar () {
+    System.out.println  ("O automóvel " + modelo + " está parado.");
+  }
+  
+  void abastecer () {
+    System.out.println  ("O automóvel " + marca + " está sendo abastecido");
+  }
+  
+  void estacionar () {
+    System.out.println  ("O automóvel " + modelo + " está estacionado");
+  }
+
+}
+
+package aula04;
+
+public class Pessoa {
+
+   String nome;
+   int idade;
+   String sexo;
+   String nacionalidade;
+   String naturalidade;
+   String estadoCivil;
+   
+   void estudar () {
+     System.out.println  ("A " + nome + " é estudante");
+   }
+   
+   void passear () {
+     System.out.println  ("A " + nome + " está passeando");
+   }
+
+  void casar () {
+    System.out.println ("A " + nome + " não é casada");
+  }
+  
+  void viajar () {
+    System.out.println  ("A " + nome + " ama viajar");
+  }
+  
+}
+
+package aula04;
+
+public class Contato {
+
+   String nome;
+   String telefone;
+   String endereco;
+   
+   void salvarContato () {
+     System.out.println  ("O contato " + nome + " foi salvo");
+   }
+   
+   void mostrarContato () {
+     System.out.println  ("O contato " + nome + " será visualizado.");
+   }
+   
+   void ligarParaContato () {
+     System.out.println ("A chamada está sendo encaminhada para: " + nome);
+   }
+}
